@@ -4,11 +4,11 @@ import time
 import os
 from netmiko import ConnectHandler
 
-ipaddress = "10.199.199.250"  # example
+ipaddress = "10.199.199.251"  # example
 print("I'll attempt to ping: " + ipaddress)
 response = os.system("ping -c 1 " + ipaddress)
 
-#and then check the response...
+# and then check the response...
 if response == 0:
     print(ipaddress, 'is up!')
     print("The current time is:", time.asctime())
