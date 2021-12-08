@@ -8,9 +8,7 @@ user = input("Enter your cisco username: ")
 password = getpass.getpass()
 
 tn = telnetlib.Telnet(HOST)
-
 tn.read_until(b"Username: ")
-
 tn.write(user.encode('ascii') + b"\n")
 
 if password:
@@ -36,3 +34,4 @@ tn.write(b"exit\n")
 tn.write(b"write memory\n")
 
 print(tn.read_all().decode('ascii'))
+print("Addition of VLANS to a switch has completed")
