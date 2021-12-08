@@ -32,6 +32,7 @@ tn.write(b"exit\n")
 
 tn.write(b"exit\n")
 tn.write(b"write memory\n")
+tn.write(b"exit\n")
 
 print(tn.read_all().decode('ascii'))
 print("Addition of VLANS to a switch has completed")
