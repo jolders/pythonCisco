@@ -18,7 +18,7 @@ if password:
 
 tn.write(b"terminal len 0\n")
 tn.write(b"configure terminal\n")
-for x in range(10, 51):  # VLAN10 -> VLAN50
+for x in range(10, 30):  # VLAN10 -> VLAN50
     tn.write("vlan{}\n".format(x).encode())
     tn.write("name VLAN{}\n".format(x).encode())
 
