@@ -19,20 +19,16 @@ if password:
 
 tn.write(b"terminal len 0\n")
 tn.write(b"configure terminal\n")
-# VLAN 10
-tn.write(b"vlan 10\n")
-tn.write(b"name SALES\n")
+tn.write(b"hostname RTR1\n")
+# tn.write(b"router eigrp 100\n")
+# tn.write(b"no auto-summary\n")
+# tn.write(b"network 0.0.0.0\n")
 tn.write(b"exit\n")
-# VLAN 20
-tn.write(b"vlan 20\n")
-tn.write(b"name ACCOUNTS\n")
-tn.write(b"exit\n")
-# VLAN 30
-tn.write(b"vlan 30\n")
-tn.write(b"name DISTRIBUTION\n")
-tn.write(b"exit\n")
-
-tn.write(b"exit\n")
+# tn.write(b"exit\n")
+tn.write(b"show ip protocol\n")
+tn.write(b"show version\n")
+tn.write(b"show ip interface brief\n")
 tn.write(b"write memory\n")
+tn.write(b"exit\n")
 
 print(tn.read_all().decode('ascii'))
